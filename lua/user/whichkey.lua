@@ -9,3 +9,5 @@ whichkey.mappings["y"] = {
   v = { "<cmd>Ydv<CR>", "Query words from selected." },
   d = { "<cmd>Yde<CR>", "Query words from input." },
 }
+
+whichkey.setup.icons.group = lvim.icons.ui.Plus .. ' '
