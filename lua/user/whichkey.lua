@@ -83,3 +83,12 @@ local repl_mappings = {
 }
 whichkey.mappings["r"] = repl_mappings
 whichkey.vmappings["r"] = repl_mappings
+
+local window_mappings = {
+  name = "Window",
+  s = { ":sp<CR>", "Split Horizontally" },
+  v = { ":vs<CR>", "Split Vertically" },
+  l = { ":windo set invrelativenumber<CR>", "Toggle relative number" },
+}
+whichkey.mappings["w"] = window_mappings
+whichkey.vmappings["w"] = window_mappings

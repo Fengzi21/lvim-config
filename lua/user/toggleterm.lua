@@ -32,7 +32,7 @@ local conf = {
     if term.direction == "vertical" then
       return 80
     elseif term.direction == "horizontal" then
-      return 20
+      return 15
     end
   end,
   terminal_mappings = true, -- whether or not the open mapping applies in the opened terminals
