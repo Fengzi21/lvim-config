@@ -5,7 +5,6 @@ local whichkey = lvim.builtin.which_key
 
 -- add a space after group Plus icon
 whichkey.setup.icons.group = lvim.icons.ui.Plus .. " "
-
 -- ydict --
 local ydict_mappings = {
   name = "YDict",
@@ -92,3 +91,24 @@ local window_mappings = {
 }
 whichkey.mappings["w"] = window_mappings
 whichkey.vmappings["w"] = window_mappings
+
+-- Telescope --
+local telescope_mappings = {
+  name = "Telescope",
+  f = { ":Telescope find_files<CR>", "Find Files" },
+  t = { ":Telescope live_grep theme=ivy<CR>", "Find Text" },
+  g = { ":Telescope live_grep<CR>", "Grep" },
+  G = { ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", "Grep Args" },
+  b = { ":Telescope buffers<CR>", "Lists open buffers" },
+  h = { ":Telescope help_tags<CR>", "Lists available help tags" },
+  P = { ":Telescope projects<CR>", "Projects" },
+  s = { ":Telescope grep_string<CR>", "Grep String" },
+  E = { ":Telescope emoji<CR>", "Emoji Search" },
+  e = { ":Telescope file_browser<CR>", "File Browser" },
+}
+
+whichkey.mappings["f"] = telescope_mappings
+whichkey.vmappings["f"] = telescope_mappings
+
+whichkey.mappings["F"] = { ":Telescope live_grep theme=ivy<CR>", "Find Text" }
+whichkey.vmappings["F"] = { ":Telescope live_grep theme=ivy<CR>", "Find Text" }

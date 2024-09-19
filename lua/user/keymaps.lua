@@ -106,9 +106,6 @@ modes['n']["<C-/>"] = toggle_linewise_current()
 modes['x']["<C-/>"] = "<Plug>(comment_toggle_linewise_visual)"
 modes['v']["<C-/>"] = "<Plug>(comment_toggle_linewise_visual)"
 
--- Jupyter in Repl --
-vim.cmd([[ nmap ]x ctrih/^# %%<CR><CR> ]])
-
 -- Run in Repl --
 -- ref: https://github.com/Vigemus/iron.nvim
 modes['i']["<C-e>"] = rtn.i .. ":lua require('iron.core').send_line()<CR>"
@@ -122,3 +119,7 @@ modes['i']["<C-i>"] = rtn.i .. ":ToggleTermSendCurrentLine 7<CR>"
 modes['n']["<C-i>"] = ":ToggleTermSendCurrentLine 7<CR>"
 modes['x']["<C-i>"] = ":ToggleTermSendVisualLines 7<CR>"
 modes['v']["<C-i>"] = ":ToggleTermSendVisualLines 7<CR>"
+
+-- Jupyter in Repl --
+-- Run the cell started by `# %%` with `]x`
+vim.cmd([[nmap ]x ctrih/^# %%<CR><CR>]])
