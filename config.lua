@@ -5,6 +5,10 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
 
+-- Use Lspsaga breadcrumbs instead --
+lvim.builtin.breadcrumbs.active = false
+
+
 require("user.options")
 require("user.plugins")
 require("user.keymaps")

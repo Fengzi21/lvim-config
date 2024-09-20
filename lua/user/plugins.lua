@@ -90,6 +90,16 @@ lvim.plugins = {
 
   --]]
 
+  -- LSP --
+  {
+    'nvimdev/lspsaga.nvim',
+    config = true,
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter', -- optional
+      'nvim-tree/nvim-web-devicons',     -- optional
+    },
+  },
+
   -- UI --
   { "m4xshen/smartcolumn.nvim" },
 
