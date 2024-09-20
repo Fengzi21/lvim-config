@@ -3,6 +3,10 @@
 
 local whichkey = lvim.builtin.which_key
 
+-- Buffer --
+whichkey.mappings.b.c = { "<cmd>BufferKill<CR>", "Close Buffer" }
+whichkey.mappings.c = nil
+
 -- add a space after group Plus icon
 whichkey.setup.icons.group = lvim.icons.ui.Plus .. " "
 -- ydict --
