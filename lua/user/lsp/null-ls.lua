@@ -32,6 +32,14 @@ formatters.setup {
     extra_args = { "$FILENAME" },
   },
   { command = "markdownlint", filetypes = { "markdown" } },
+  {
+    command = "fprettify",
+    extra_args = {
+      "--indent=2",
+      "--whitespace=3",
+      "--enable-decl",
+    },
+  },
 
   -- { name = "black" },
   -- {
