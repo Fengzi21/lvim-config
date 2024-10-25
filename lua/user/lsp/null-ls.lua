@@ -19,6 +19,6 @@ formatters.setup {
       "--no-bracket-spacing",
     },
     -- filetypes = { "typescript", "typescriptreact", "json", "javascript" },
-    disabled_filetypes = { "lua", "python", "fortran", "rust" },
+    disabled_filetypes = { "lua", "python", "fortran", "rust", "c" },
   },
 }
