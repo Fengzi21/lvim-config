@@ -116,3 +116,6 @@ whichkey.vmappings["f"] = telescope_mappings
 
 whichkey.mappings["F"] = { ":Telescope live_grep theme=ivy<CR>", "Find Text" }
 whichkey.vmappings["F"] = { ":Telescope live_grep theme=ivy<CR>", "Find Text" }
+
+whichkey.mappings["R"] = { "::w<CR>:exec '!run' shellescape(@%, 1)<CR>", "Run Buffer" }
+whichkey.vmappings["R"] = { "::w<CR>:exec '!run' shellescape(@%, 1)<CR>", "Run Buffer" }
