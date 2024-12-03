@@ -6,6 +6,7 @@ local whichkey = lvim.builtin.which_key
 -- Buffer --
 whichkey.mappings.b.c = { "<cmd>BufferKill<CR>", "Close Buffer" }
 whichkey.mappings.c = nil
+whichkey.mappings.H = { ":nohlsearch<CR>", "No Highlight" }
 
 -- add a space after group Plus icon
 whichkey.setup.icons.group = lvim.icons.ui.Plus .. " "
@@ -42,6 +43,17 @@ local toggleterm_mappings = {
 }
 whichkey.mappings["t"] = toggleterm_mappings
 whichkey.vmappings["t"] = toggleterm_mappings
+
+-- Haskell --
+local haskell_mappings = {
+  name = "Haskell",
+    n = { ":ToggleTermSetName<CR>", "Set terminal name" },
+    l = { ":ToggleTermSendCurrentLine 9<CR>", "Send current line to ipython" },
+    v = { ":ToggleTermSendVisualLines 9<CR>", "Send visual lines to ipython" },
+    b = { ":ToggleTermSendVisualSelection 9<CR>", "Send visually selected block to ipython" },
+}
+whichkey.mappings["h"] = haskell_mappings
+whichkey.vmappings["h"] = haskell_mappings
 
 -- Markdown --
 local markdown_mappings = {
